@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Current Time</title>
+</head>
+<body>
+<h1>Current Time</h1>
+<form th:action="@{/time}" method="get">
+  <label for="timezone">Enter Timezone (UTC +/- Hours):</label>
+  <input type="text" id="timezone" name="timezone" />
+  <button type="submit">Get Time</button>
+</form>
+<p th:text="${time}"></p>
+</body>
+</html>
